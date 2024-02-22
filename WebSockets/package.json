@@ -1,0 +1,16 @@
+{
+  "name": "websocker_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@socket.io/admin-ui": "^0.5.1",
+    "socket.io": "^4.7.2"
+  }
+}
