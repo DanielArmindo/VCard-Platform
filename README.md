@@ -80,3 +80,5 @@ npm run dev
 - Node Server - **:8080**
 
 When changing the laravel url, don't forget to modify the **VITE_API_DOMAIN** variable in the vue app's **.env.development** file.
+
+**Caution** - To log-in into web application you need to go to the database and get an username from view_table and the password for anyone is 123
