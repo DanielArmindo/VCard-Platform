@@ -1,6 +1,6 @@
 # Disclaimer
 
-This project was carried out as part of the Advanced Topics in Software Engineering and Development of Distributed Applications courses in Computer Engineering at the Polytechnic Institute of Leiria.
+This project was carried out as part of the Development of Distributed Applications course in Computer Engineering at the Polytechnic Institute of Leiria.
 
 # About Project
 
