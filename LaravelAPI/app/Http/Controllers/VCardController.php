@@ -301,11 +301,21 @@ class VCardController extends Controller
         $moneySpentByCategory = $vcard->transactions()->where('type', 'D')->get()->groupBy('category_id')->map(function ($item) {
             return $item->sum('value');
         });
-        // Change the keys of the array to the category name
+
         $moneySpentByCategory = $moneySpentByCategory->mapWithKeys(function ($value, $key) {
-            $category = $key == null ? 'SemCategoria' : \App\Models\Category::find($key)->name;
-            return [$category => $value];
+            if ($key === null) {
+                $categoryName = 'SemCategoria';
+            } else {
+                $category = \App\Models\Category::find($key);
+                if ($category) {
+                    $categoryName = $category->name;
+                } else {
+                    $categoryName = 'Sem Categoria';
+                }
+            }
+            return [$categoryName => $value];
         });
+
 
         // Just the top 10 categories
         $moneySpentByCategory = $moneySpentByCategory->sortDesc()->take(10);
