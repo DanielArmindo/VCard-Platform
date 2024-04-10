@@ -79,7 +79,7 @@ npm run dev
 
 **Be careful** with the application's ports to avoid conflicts.
 
-- Vue - **:3000**
+- Vue - **:5173**
 - Laravel - On Windows, Laragon creates a dedicated URL, otherwise, avoid using other ports. (Don't forget to change the files that use the laravel URL)
 - Node Server - **:8080**
 
