@@ -6,7 +6,7 @@ The main focus of the application developed in this project is the management of
 
 **Attention**
 
-This project is **based on the same scenario presented in the [VCard_WebApp](https://github.com/DanielArmindo/VCard_WebApp) repository**. To run the web application resulting from this project, it will be necessary to use all the components present in the aforementioned repository, with the exception of those related to the Vue.js framework. This approach allows for harmonious integration between the parts developed, guaranteeing the consistency and functionality expected by the end user.
+This project is **based on the same scenario presented in the [Vcard-Platform](https://github.com/DanielArmindo/VCard-Platform) repository**. To run the web application resulting from this project, it will be necessary to use all the components present in the aforementioned repository, with the exception of those related to the Vue.js framework. This approach allows for harmonious integration between the parts developed, guaranteeing the consistency and functionality expected by the end user.
 
 This application is partitioned into several JavaScript source files (js), from which vite ([https://vitejs.dev](https://vitejs.dev)) or a similar tool will generate the application file (or files).
 
