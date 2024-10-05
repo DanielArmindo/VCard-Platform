@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AccessToApplicationWithoutAuthetication</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c8c5c9a1-ae42-4741-a702-c393302526c0</testCaseGuid>
+</TestCaseEntity>

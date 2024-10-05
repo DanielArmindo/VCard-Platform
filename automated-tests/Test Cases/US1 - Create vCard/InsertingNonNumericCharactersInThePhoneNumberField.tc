@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>InsertingNonNumericCharactersInThePhoneNumberField</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f56350cc-7ecb-46f3-bb2a-daa36831298b</testCaseGuid>
+</TestCaseEntity>

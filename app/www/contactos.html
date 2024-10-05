@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/access.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <title>Enviar para</title>
+</head>
+
+<body>
+    <div class="top-background d-flex align-items-center justify-content-center position-relative">
+        <button id="prevBtn" class="position-absolute start-0 text-uppercase w-10 bg-transparent btn btn-sm btn-outline-light border-0 p-2">
+            &larr;
+        </button>
+        <div class="display-6 text-light title">Contactos</div>
+    </div>
+    <div class="bottom-background">
+        <div class="m-4 mt-0 h-100 position-relative">
+            <div id="btn-enviar-contacto" class="d-flex  text-start align-items-center text-light">
+                <div id="btn-profile" class="m-2 bg-light rounded-circle h-25 ">
+                    <img id="profile-img" class="rounded-circle square-image" src="img/send.png" alt="profile" height="40px" width="40px">
+                </div>
+                <span class="m-3 mb-0 mt-0">Enviar para Número de Telemóvel</span>
+            </div>
+            <div id="btn-novo-contacto" class="d-flex mt-2 mb-4 text-start align-items-center text-light">
+                <div id="btn-profile" class="m-2 bg-light rounded-circle h-25 ">
+                    <img id="profile-img" class="rounded-circle square-image" src="img/profile.png" alt="profile" height="40px" width="40px">
+                </div>
+                <span class="m-3 mb-0 mt-0">Novo Contacto</span>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <h6 class="text-secondary">Contactos</h6>
+                <div class="d-flex">
+                    <span class="text-secondary">Contactos VCard:</span>&nbsp;
+                    <span id="number-of-vcard-contacts" class="text-light">0</span>
+                </div>
+            </div>
+            <ol id="contacts-list" class="mt-2 list-group list-group-flush rounded w-100">
+                <li id="no-contacts-message" class="text-secondary text-center d-none" style="margin-top: 50%;">
+                    <h3 class="custom-text-font">Sem Contactos</h3>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/contactos.js"></script>
+</body>
+
+</html>

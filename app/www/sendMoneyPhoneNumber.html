@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/access.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="toastify-js/src/toastify.css">
+    <title>Enviar para</title>
+</head>
+
+<body>
+    <div class="top-background d-flex align-items-center justify-content-center position-relative">
+        <button id="prevBtn" class="position-absolute start-0 text-uppercase w-10 bg-transparent btn btn-sm btn-outline-light border-0 p-2">
+            &larr;
+        </button>
+        <div class="display-6 text-light title">Enviar dinheiro</div>
+    </div>
+    <div class="bottom-background">
+        <div class="h-100 w-100 position-relative text-center align-items-center p-5 pt-0">
+            <div class="d-flex flex-column align-items-start justify-content-center m-0 mt-4">
+                <span class="text-light m-0">Destinatário</span>
+                <div class="d-flex align-items-center">
+                    <input id="phoneNumber" type="tel" name="phoneNumber" class="bg-transparent border-0 border-bottom px-0" placeholder="O número">
+                </div>
+                <p id="error-message-phone" class="text-danger"></p>
+            </div>
+            <div class="d-flex flex-column align-items-start justify-content-center">
+                <span class="mt-4 text-light">Valor a enviar</span>
+                <div class="d-flex align-items-center">
+                    <input oninput="adjustWidth(this)" id="moneyInput" type="tel" placeholder="0.00" class="bg-transparent border-0 border-bottom custom-input-size rounded-0 p-0 pt-1 mb-1 position-relative">
+                    <h1 class="text-light p-0 m-2">€</h1>
+                </div>
+                <p id="error-message" class="text-danger"></p>
+            </div>
+            <div class="d-flex flex-column align-items-start justify-content-center">
+                <span class="mt-4 text-light">Descrição (opcional)</span>
+                <input placeholder="Ex: Almoço" id="description" class="bg-transparent border-0 border-bottom p-0 pt-1 pb-1 w-75 mb-1" type="text">
+            </div>
+            <div class="d-flex fixed-bottom w-100 mb-4 text-center justify-content-around">
+                <button id="btnAvançar" class="text-uppercase w-50 bg-transparent btn btn-outline-light btn-page-link">Avançar</button>
+            </div>
+        </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/sendMoneyAnonim.js"></script>
+    <script src="toastify-js/src/toastify.js"></script>
+</body>
+
+</html>

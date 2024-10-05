@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <title>Filtros</title>
+    <style>
+        .background-color {
+            background-color: rgba(18, 18, 18, 1);
+        }
+
+        .bg-div {
+            background-color: rgba(35, 35, 35, 1) !important;
+        }
+
+        ::placeholder {
+            color: gray !important;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0.4;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        body {
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        html {
+            animation-name: slide;
+            animation-duration: 1.3s;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        @media screen and (max-height: 768px) {
+            #btn-container {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="background-color text-light p-0 m-0">
+    <div class="container p-3 position-absolute w-100 h-100">
+        <h1 id="btn-close" class="position-absolute top-0 end-0 m-3 mb-5">&#215;</h1>
+
+        <div class="d-flex flex-column mt-5">
+            <span class="text-uppercase mb-2"><strong>Ordenar Por</strong></span>
+            <select id="selectSort" class="form-select bg-div text-light border-0">
+                <option value="DDESC">Data mais recente</option>
+                <option value="DASC">Data mais antiga</option>
+                <option value="VDESC">Valor transacional maior</option>
+                <option value="VASC">Valor transacional menor</option>
+            </select>
+        </div>
+
+        <div class="d-flex flex-column mt-5">
+            <span class="text-uppercase mb-2"><strong>Filtros</strong></span>
+
+            <div class="pt-1 pr-0">
+
+                <div class="p-2 d-flex flex-column mb-3">
+                    <span class="mb-2"><strong>Tipo</strong></span>
+                    <select id="selectType" class="form-select bg-div text-light border-0">
+                        <option value="">Todos</option>
+                        <option value="C">Crédito</option>
+                        <option value="D">Débito</option>
+                    </select>
+                </div>
+
+                <div class="p-2 d-flex flex-column mb-3">
+                    <span class="mb-2"><strong>Entidade</strong></span>
+                    <input id="inputEntidade" type="text" class="form-control bg-div text-light border-0" placeholder="Ex: 912345678">
+                </div>
+
+                <div class="p-2 d-flex flex-column">
+                    <span class="mb-2"><strong>Data</strong></span>
+                    <div class="p-3 pt-0 pr-0">
+                        <span class="mb-2"><strong>Início</strong></span>
+                        <input id="inputDataInicio" type="date" class="form-control bg-div text-light border-0 mb-2">
+                        <span class="mb-2"><strong>Fim</strong></span>
+                        <input id="inputDataFim" type="date" class="form-control bg-div text-light border-0">
+                        <p id="error-message" class="text-danger"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="btn-container" class="w-100 text-center p-4 fixed-bottom">
+            <button id="btn-reset" class="btn btn-sm btn-secondary text-light w-75 text-uppercase mb-1"><strong>Redefinir filtros</strong></button>
+            <button id="btn-apply" class="btn btn-sm btn-info text-dark w-100 text-uppercase mt-3"><strong>Aplicar filtros</strong></button>
+        </div>
+
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/transactions-filters.js"></script>
+</body>
+
+</html>

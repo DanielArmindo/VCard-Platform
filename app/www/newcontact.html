@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/create.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="toastify-js/src/toastify.css">
+    <title>Novo Contacto</title>
+</head>
+
+<body>
+    <div class="top-background d-flex align-items-center justify-content-center position-relative">
+        <button id="btnBack" class="position-absolute start-0 text-uppercase w-10 bg-transparent btn btn-sm btn-outline-light border-0 p-2">
+            &larr;
+        </button>
+    <div class="display-6 text-light title">Novo Contacto</div>
+</div>
+    <div class="bottom-background">
+        <div class="app h-100 w-90 position-relative w-75">
+            <div class="d-flex flex-column text-start align-items-start justify-content-center w-100">
+                <label class="mt-4 text-light">Numero de <strong>Telemóvel</strong></label>
+                <input id="phoneNumber" type="tel" name="phoneNumber" class="bg-transparent border-0 border-bottom p-0 pt-1 pb-1 w-20 mb-1 w-50" placeholder="O seu número">
+                <p id="error-message" class="text-danger w-100"></p>
+            </div>
+            <div id="name-container" class="d-flex flex-column align-items-start justify-content-center">
+                <label class="mt-4 text-light">Nome (opcional)</label>
+                <input id="name" class="bg-transparent border-0 border-bottom p-0 pt-1 pb-1 w-20 mb-1 w-75" type="text">
+            </div>
+            <div class="d-flex fixed-bottom w-100 mb-4 text-center justify-content-around">
+                <button id="btnCriarEContinuar" class="text-uppercase w-50 bg-transparent btn btn-outline-light btn-page-link">criar e continuar</button>
+            </div>
+        </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/newcontact.js"></script>
+    <script src="toastify-js/src/toastify.js"></script>
+</body>
+
+</html>

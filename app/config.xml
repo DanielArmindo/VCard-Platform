@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>HelloCordova</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <content src="http://localhost/index.html" />    
+
+    <platform name="android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+         </edit-config>
+         <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+        </config-file>
+        <resource-file src="www/res/logo.png" target="app/src/main/res/drawable/logo.png" />
+            <!-- <framework src="io.socket:socket.io-client:2.1.0" custom="true" type="gradleReference" /> -->
+    </platform>
+
+    <config-file target="AndroidManifest.xml" parent="/*" xmlns:android="http://schemas.android.com/apk/res/android">
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    </config-file>
+
+    <!-- <hook src="add_gradle_dependencies.js" type="after_platform_add" /> -->
+
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="*" />
+    <access origin="*" />
+    <allow-navigation href="*" />
+</widget>

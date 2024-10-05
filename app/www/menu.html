@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="toastify-js/src/toastify.css">
+    <title>Menu</title>
+</head>
+
+<body>
+    <div class="text-light h-100">
+        <div class="display-6 top-bar bg-div p-2 text-center">
+            Menu
+        </div>
+        <div class="p-4 text-light h-100">
+
+            <div class="header-section m-1 mb-5">
+                <div class="d-flex justify-content-between bg-div mb-2 align-items-center h-75 p-3 pt-2 pb-0 rounded">
+                    <h4 id="nome" class="custom-text-font text-light">Olá, utilizador</h4>
+                    <div class="d-flex justify-content-between mb-2 align-items-center h-100 ">
+                        <div id="btn-notifications">
+                            <svg id="no-notifications-to-read" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-bell m-3" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                            </svg>
+                            <svg id="notifications-to-read" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-bell m-3 d-none" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                                <circle cx="13" cy="3" r="3" fill="red" />
+                            </svg>
+                        </div>
+                        <svg id="btn-definicoes" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-gear " viewBox="0 0 16 16">
+                            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between bg-div p-3 rounded align-items-center h-25">
+                    <span class="custom-text-font text-secondary">SALDO</span>
+                    <span id="saldo" class="custom-text-font text-light"></span>
+                    <span class="custom-text-font text-secondary">MEALHEIRO</span>
+                    <span id="mealheiro" class="custom-text-font text-light"></span>
+                </div>
+            </div>
+
+            <div class="features-section mb-4">
+                <div class="d-flex justify-content-between h-100">
+                    <div id="btn-enviar-dinheiro" class="bg-div p-3 m-1 mt-0 text-center rounded feature">
+                        <img class="square-image" src="img/send-money.png" alt="Send money">
+                        <br>
+                        <span class="custom-text-font small">Enviar dinheiro</span>
+                    </div>
+                    <div id="btn-lista-transacoes" class="bg-div p-3 m-1 mt-0 text-center rounded feature">
+                        <img class="square-image" src="img/transaction-list-icon.png" alt="Transaction list">
+                        <br>
+                        <span class="custom-text-font small">Lista de transações</span>
+                    </div>
+                    <div id="btn-mealheiro" class="bg-div p-3 m-1 mt-0 text-center rounded feature">
+                        <img class="square-image" src="img/piggy-bank.png" alt="Piggy bank">
+                        <br>
+                        <span class="custom-text-font small">O meu mealheiro</span>
+                    </div>
+                </div>
+            </div>
+            <div class="transactions-section m-1 mt-0 bg-div rounded p-3 custom-text-font">
+                <h4 class="display-6">Última transação</h4>
+                <hr />
+                <div id="last-transaction-details-div" class="p-2 parent-div d-flex align-items-center">
+
+                    <div id="msg-sem-transacoes">
+                        <h4 class="text-secondary custom-text-font text-center" style="margin-bottom: 45% !important;">
+                            Ainda não fez nenhuma transação
+                        </h4>
+                    </div>
+
+                    <div class="d-none d-flex justify-content-between align-items-start w-100 inner-div">
+                        <div class="d-flex flex-column align-items-start">
+                            <strong class="text-secondary">ENTIDADE</strong>
+                            <span id="entidade-ultima-transacao"></span>
+                        </div>
+
+                        <div class="d-flex flex-column align-items-end">
+                            <strong class="text-secondary">VALOR</strong>
+                            <span id="valor-ultima-transacao"></span>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-flex justify-content-between align-items-start w-100 inner-div">
+                        <div class="d-flex flex-column align-items-start">
+                            <span class="text-secondary">TIPO PAGAMENTO</span>
+                            <span id="tipo-pagamento-ultima-transacao"></span>
+                        </div>
+
+                        <div class="d-flex flex-column align-items-end">
+                            <strong class="text-secondary">TIPO TRANSAÇÃO</strong>
+                            <span id="tipo-transacao-ultima-transacao"></span>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-flex justify-content-between align-items-start w-100 inner-div">
+                        <div class="d-flex flex-column align-items-start">
+                            <strong class="text-secondary">SALDO ANTES</strong>
+                            <span id="saldo-antes-ultima-transacao"></span>
+                        </div>
+                        <div class="d-flex flex-column align-items-end">
+                            <strong class="text-secondary">SALDO DEPOIS</strong>
+                            <span id="saldo-depois-ultima-transacao"></span>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-flex justify-content-between align-items-start w-100 inner-div">
+                        <div class="d-flex flex-column align-items-start">
+                            <span class="text-secondary">REFERÊNCIA</span>
+                            <span id="referencia-ultima-transacao"></span>
+                        </div>
+                        <div class="d-flex flex-column align-items-end">
+                            <span class="text-secondary">DATA</span>
+                            <span id="data-ultima-transacao"></span>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-flex justify-content-between align-items-start w-100 inner-div">
+                        <div class="d-flex flex-column align-items-start description">
+                            <span class="text-secondary">DESCRIÇÃO</span>
+                            <span class="description" id="descricao-ultima-transacao"></span>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/socketManager.js"></script>
+    <script src="toastify-js/src/toastify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    user-select: none;                           /* standard property for compatibility */
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    width:100%;
+    background-color: rgba(18,18,18,1) !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    /* background-image: url("../img/insert_phone_number_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+}
+
+/* Portrait layout (default) */
+.app {
+    /*background:url(../img/logo-no-background.png) no-repeat center top;*/
+    position:absolute !important;             /* position in the center of the screen */
+    left:35% !important;
+    /* top:17% !important; */
+    height:50px !important;                   /* text area height */
+    width:225px !important;                   /* text area width */
+    text-align:center !important;
+    padding:115px 0px 0px 0px !important;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px !important;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+    color: white;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+input{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-bottom: 2px solid lightblue !important;
+}
+
+.top-background{
+    background-color: rgba(35,35,35,1);
+    width: 100%;
+    height: 7%; 
+    transition: all 0.3s ease;
+}
+
+.bottom-background{
+    padding-top: 3%;
+    background-color: rgba(18,18,18,1);
+    width: 100%;
+    height: 93%;
+    transition: all 0.3s ease;
+}
+
+
+.opt-tel{
+    max-width: 26%;
+}
+
+.title{
+    font-size: 17px !important;
+}
+
+.btn:active{
+    color: lightblue !important;
+    border-color: lightblue !important;
+}
+
+#prevBtn{
+    margin-bottom: 5px;
+    margin-right: 25%;
+    font-size: 30px;
+}
+
+#contacts-list, #transaction-list{
+    height: 75%; /* Set the maximum height of the div */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    -webkit-overflow-scrolling: touch;
+}
+
+.custom-text-font {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.custom-input-size{
+    width: 17%;
+    font-size: 26px;
+    min-width: 16%;
+}

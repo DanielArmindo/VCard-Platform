@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/access.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <title>Central de Notifições</title>
+    <style>
+        #previous, #next {
+            background-color: transparent;
+        }
+        #previous:hover, #next:hover {
+            color: #fff;
+
+        }
+        #previous:active, #next:active {
+            background-color: rgb(1, 121, 255);
+            border-color: rgb(1, 121, 255) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-background d-flex align-items-center justify-content-center position-relative">
+        <button id="prevBtn"
+            class="position-absolute start-0 text-uppercase w-10 bg-transparent btn btn-sm btn-outline-light border-0 p-2">
+            &larr;
+        </button>
+        <div class="display-6 text-light title">Central de Notificações</div>
+    </div>
+    <div class="bottom-background position-relative" style="overflow-y: auto;">
+
+        <div class="d-flex mt-2 mb-3 text-start align-items-center text-light position-relative" style="height: 5% !important;">
+            <label class="m-3 mt-2 mb-0 text-light">
+                <strong>Mensagens não lidas: </strong> <span id="notifications-to-read" class="custom-text-font text-light">0</span>
+            </label>
+
+
+        </div>
+
+        <div id="notifications-list" class="m-0 p-0" style="height: 82% !important;">
+            <h4 id="no-notifications-msg" class="text-secondary custom-text-font text-center" style="margin-top: 50% !important;">
+                Ainda não existem notificações
+            </h4>
+        </div>
+    </div>
+
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/listMensagens.js"></script>
+
+</body>
+
+</html>

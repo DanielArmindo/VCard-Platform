@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>InsertingAnInvalidNumberOfCharactersInThePhoneNumber</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>811c9c08-be8b-40a0-a60c-588bf00f952e</testCaseGuid>
+</TestCaseEntity>

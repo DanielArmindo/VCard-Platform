@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/access.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <title>Transações</title>
+    <style>
+        #previous, #next {
+            background-color: transparent;
+        }
+        #previous:hover, #next:hover {
+            color: #fff;
+
+        }
+        #previous:active, #next:active {
+            background-color: rgb(1, 121, 255);
+            border-color: rgb(1, 121, 255) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-background d-flex align-items-center justify-content-center position-relative">
+        <button id="prevBtn"
+            class="position-absolute start-0 text-uppercase w-10 bg-transparent btn btn-sm btn-outline-light border-0 p-2">
+            &larr;
+        </button>
+        <div class="display-6 text-light title">Transações</div>
+    </div>
+    <div class="bottom-background position-relative" style="overflow-y: auto;">
+
+        <div class="d-flex mt-2 mb-3 text-start align-items-center text-light position-relative" style="height: 5% !important;">
+            <label class="m-3 mt-2 mb-0 text-light">
+                <strong>Total: </strong> <span id="numero-transacoes" class="custom-text-font text-light"></span>
+            </label>
+
+            <button class="m-3 mb-0 mt-2 btn btn-outline-secondary btn-sm m-2 position-absolute end-0" id="openFilterMenu">Filtrar e ordenar <svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter"
+                viewBox="0 0 16 16">
+                <path
+                    d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+            </svg> 
+            </button>
+
+        </div>
+
+        <div id="transaction-list" class="m-0 p-0" style="height: 82% !important;">
+            <h4 id="msg-sem-transacoes" class="text-secondary custom-text-font text-center" style="margin-top: 50% !important;">
+                Ainda não fez nenhuma transação
+            </h4>
+        </div>
+
+        <div id="paginate" class="m-4 mb-3 mt-0 d-flex justify-content-around align-content-center my-auto d-none fixed-bottom" style="height: 5% !important;">
+            <button type="button" id="previous"class="btn btn-outline-light">&#60;</button>
+            <span id="num-pagina" class="text-light mt-1"></span>
+            <button type="button" id="next"class="btn btn-outline-light">&#62;</button>
+        </div>
+    </div>
+
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/listTransactions.js"></script>
+
+</body>
+
+</html>

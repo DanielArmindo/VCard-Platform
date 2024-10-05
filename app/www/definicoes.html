@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/access.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="toastify-js/src/toastify.css">
+    <title>Definicoes</title>
+    <style>
+        #btn-spare-change:active {
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        #btn-spare-change:hover {
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-background d-flex align-items-center justify-content-center position-relative">
+        <button id="prevBtn" class="position-absolute start-0 text-uppercase w-10 bg-transparent btn btn-sm btn-outline-light border-0 p-2">
+            &larr;
+        </button>
+        <div class="display-6 text-light title">Definições</div>
+    </div>
+    <div class="bottom-background position-relative p-2">
+
+        <div class="m-3 d-flex flex align-items-start align-middle justify-content-between">
+            <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip">
+                <strong class="text-light">Spare Change</strong>
+            </span>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="btn-spare-change" disabled>
+            </div>
+        </div>
+        
+        <div class="m-3 d-flex flex align-items-start align-middle justify-content-between">
+            <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip">
+                <strong class="text-light">Notifications</strong>
+            </span>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="btn-notifications" disabled>
+            </div>
+        </div>
+
+       
+        <div class="fixed-bottom h-25 p-0 d-flex flex-column align-items-center text-center justify-content-center">
+            <div id="deleteAccountBtn" class="d-flex justify-content-center align-items-center rounded w-75" style="height: 20% !important; background-color:#232323;">
+                <span class="m-1 text-light">Delete Vcard Account</span> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-x text-white" viewBox="0 0 16 16">
+                    <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m-.646-4.854.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 0 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 .708-.708"/>
+                </svg> 
+            </div>
+            <div class="m-0 d-flex justify-content-center align-items-center position-absolute bottom-0 w-100" style="height: 25% !important; background-color:#232323;">
+                <span id="logout" class="m-1 text-light">Logout</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right m-1 text-white" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/definicoes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+    <script src="toastify-js/src/toastify.js"></script>
+</body>
+
+</html>

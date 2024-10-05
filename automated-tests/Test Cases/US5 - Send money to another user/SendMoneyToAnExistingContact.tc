@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SendMoneyToAnExistingContact</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>cd22b858-bb1b-4f84-a463-8f895973029d</testCaseGuid>
+</TestCaseEntity>

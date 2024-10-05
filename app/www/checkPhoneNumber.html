@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/checkPhoneNumber.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="toastify-js/src/toastify.css">
+    <title>checkPhoneNumber</title>
+</head>
+
+<body>
+    <div class="top-background text-center d-flex flex-column align-items-center justify-content-end">
+        <h1 id="title" class="display-1 text-light">
+            <strong class="text-primary">V</strong>Card
+        </h1><br>
+    </div>
+    <div class="bottom-background">
+        <div class="app h-100 position-relative">
+            <p class="mt-4">Insira o seu nº de telemóvel para começar a utilizar o Vcard.</p>
+            <div class="d-flex">
+                <select class="bg-transparent m-1 border-0 border-bottom opt-tel">
+                    <option value="+351" class="bg-white text-dark">+351</option>
+                </select>
+                <input id="phoneNumber" type="tel" name="phoneNumber" class="bg-transparent m-1 border-0 border-bottom" placeholder="O seu número">
+            </div>
+            <p id="error-message" class="text-danger"></p>
+            <div class="fixed-bottom w-100 mb-4">
+                <button id="btn" class="text-uppercase w-50 bg-transparent btn btn-outline-light btn-page-link">continuar</button>
+            </div>
+        </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/checkPhoneNumber.js"></script>
+    <script src="toastify-js/src/toastify.js"></script>
+</body>
+
+</html>

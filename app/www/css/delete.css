@@ -1,0 +1,114 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    user-select: none;                           /* standard property for compatibility */
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    width:100%;
+    background-color: rgba(18,18,18,1) !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+input:focus, select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input[type="text"] {
+    font-size: large;
+}
+
+.top-background{
+    background-color: rgba(35,35,35,1);
+    width: 100%;
+    height: 65px;
+    min-height: 40px !important;
+    transition: all 0.5s ease;
+}
+
+.bottom-background{
+    padding-top: 3%;
+    background-color: rgba(18,18,18,1);
+    width: 100%;
+    height: 93%;
+    transition: all 0.5s ease;
+}
+
+
+.opt-tel{
+    max-width: 26%;
+}
+
+.title{
+    font-size: 17px !important;
+}
+
+.btn:active{
+    color: lightblue !important;
+    border-color: lightblue !important;
+}
+
+#prevBtn{
+    margin-bottom: 5px;
+    margin-right: 25%;
+    font-size: 30px;
+}
+
+#contacts-list {
+    height: 75%; /* Set the maximum height of the div */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.custom-text-font {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.custom-input-size{
+    width: 33%;
+    font-size: 38px;
+    min-width: 33%;
+}
+
+.bg-div {
+    background-color: rgb(35,35,35);
+    overflow: hidden;
+}
+
+.square-image {
+    width: 90%;
+    height: 90%;
+    max-height: 90%; 
+    object-fit: contain;
+    transition: all 1s ease;
+    aspect-ratio: 1 / 1;
+}
+
+#container-img{
+    height: 20%;
+    transition: all 1s ease;
+}
+
+@media screen and (max-height: 768px) {
+    .top-background{
+        height: 40px !important;
+    }
+    .square-image{
+        width: 90%;
+        height: 90%;
+    }
+    #container-img{
+        height: 18%;
+    }
+}
