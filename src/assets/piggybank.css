@@ -1,0 +1,21 @@
+.div-img-background {
+  background: radial-gradient(circle, rgb(254, 193, 7), rgb(255, 221, 100));
+  box-shadow: 0px 0px 20px 0px rgb(255, 221, 100);
+}
+.bg {
+  background-color: rgb(242, 242, 242);
+}
+.custom-font {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 300;
+  font-size: 2rem;
+}
+.font-size {
+  font-size: 5rem;
+}
+.input-font {
+  font-size: 1.5rem;
+}
+.flip-horizontal {
+  transform: scaleX(-1);
+}

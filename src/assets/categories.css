@@ -1,0 +1,16 @@
+.filter-div {
+    min-width: 12rem;
+}
+
+.total-filtro {
+    margin-top: 0.35rem;
+}
+
+.btn-addcategory {
+    margin-top: 1.85rem;
+}
+
+button {
+  margin-left: 3px;
+  margin-right: 3px;
+}

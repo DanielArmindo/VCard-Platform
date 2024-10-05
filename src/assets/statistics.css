@@ -1,0 +1,11 @@
+.bg-gradient-blue {
+  background-image: linear-gradient(
+    to right,
+    rgb(52, 73, 94),
+    rgb(113, 161, 232)
+  );
+}
+
+.icon-size {
+  font-size: 2rem;
+}

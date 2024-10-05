@@ -1,0 +1,17 @@
+.filter-div {
+  min-width: 12rem;
+}
+
+.total-filtro {
+  margin-top: 0.35rem;
+}
+
+.btn-newTransaction,
+.btn-askForMoney {
+  margin-top: 1.85rem;
+  margin-left: 1rem;
+}
+button {
+  margin-left: 3px;
+  margin-right: 3px;
+}
